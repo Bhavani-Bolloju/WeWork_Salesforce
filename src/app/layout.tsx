@@ -1,4 +1,4 @@
-import "./globals.scss";
+import "../styles/globals.scss";
 import { Figtree } from "next/font/google";
 
 const figtree = Figtree({ subsets: ["latin"] });
