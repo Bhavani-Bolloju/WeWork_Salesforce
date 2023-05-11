@@ -2,6 +2,9 @@
 import React from "react";
 import classes from "./Main.module.scss";
 import { Button } from "antd";
+import { MessageOutlined, ShareAltOutlined } from "@ant-design/icons";
+import { Badge } from "antd";
+import { Progress } from "antd";
 
 function Main({ children }: { children: React.ReactNode }) {
   return (
@@ -9,9 +12,14 @@ function Main({ children }: { children: React.ReactNode }) {
       <section className={classes["section-header"]}>
         <div className={classes["section-header-content"]}>
           <h2>project scope recap</h2>
-          <div className={classes["mutual-action"]}>
-            <p>Mutual action plan</p>
-            <p>bar</p>
+          <div className={classes["action-plan"]}>
+            <p className={classes["action-plan-content"]}>
+              <span className={classes["action-plan-text"]}>
+                Mutual action plan
+              </span>
+              <span className={classes["action-plan-percent"]}>3%</span>
+            </p>
+            <Progress steps={17} percent={3} />
           </div>
         </div>
         <div className={classes["section-btns"]}>
@@ -33,6 +41,15 @@ function Main({ children }: { children: React.ReactNode }) {
         </ul>
       </nav>
       {children}
+      <div className={classes["section-footer"]}>
+        {/* <div className={classes["message-icon"]}>
+          <MessageOutlined />
+        </div> */}
+        <Badge count={5} style={{ fontSize: "10px" }}>
+          <MessageOutlined />
+        </Badge>
+        <ShareAltOutlined className={classes["share-icon"]} />
+      </div>
     </main>
   );
 }

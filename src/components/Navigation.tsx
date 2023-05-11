@@ -8,6 +8,8 @@ import {
   HiOutlineChevronRight
 } from "react-icons/hi";
 
+import { Badge } from "antd";
+
 import image from "../assets/user.jpg";
 import classes from "./Navigation.module.scss";
 
@@ -27,6 +29,10 @@ function Navigation() {
         <li className={classes["notification"]}>
           <HiOutlineBell />
           <span className={classes["notification-badge"]}>10</span>
+
+          {/* <Badge count={5} style={{ fontSize: "10px" }}>
+       <HiOutlineBell />
+        </Badge> */}
         </li>
         <li>
           <HiOutlineQuestionMarkCircle />
