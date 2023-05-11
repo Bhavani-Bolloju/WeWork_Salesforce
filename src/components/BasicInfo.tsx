@@ -2,7 +2,16 @@ import React from "react";
 import classes from "./BasicInfo.module.scss";
 import weWork from "../assets/wework-title.png";
 import logo from "../assets/wework-logo.png";
-import { VscEyeClosed, VscArrowDown, VscTrash } from "react-icons/vsc";
+import {
+  VscEyeClosed,
+  VscArrowDown,
+  VscTrash,
+  VscFilePdf,
+  VscZoomIn,
+  VscZoomOut
+} from "react-icons/vsc";
+import { TfiDownload } from "react-icons/tfi";
+import { MdOutlineOpenInNew } from "react-icons/md";
 
 function BasicInfo() {
   return (
@@ -22,6 +31,16 @@ function BasicInfo() {
           <p className={classes["title"]}>
             For all the ways you work, we are here
           </p>
+        </div>
+        <div className={classes["image-controls"]}>
+          <div className={classes["pdf-icon"]}>
+            <VscFilePdf />
+            <span>1/15</span>
+          </div>
+          <TfiDownload />
+          <VscZoomIn />
+          <VscZoomOut />
+          <MdOutlineOpenInNew />
         </div>
       </div>
     </section>

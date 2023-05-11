@@ -47,11 +47,17 @@
     padding: 0rem 3rem;
     height: 4rem;
     font-size: 1.6rem;
+  }
 
+  :global(.ant-btn-primary) {
+    // background-color: red;
     &:hover {
-      background-color: var(--accent-1);
+      background-color: #fff;
+      border: 1px solid var(--grey-3);
+      color: var(--accent-1);
     }
   }
+
   &-logo {
     display: flex;
     align-items: center;
