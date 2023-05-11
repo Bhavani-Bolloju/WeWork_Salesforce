@@ -1,9 +1,12 @@
+// "use client";
+
 import "../styles/globals.scss";
 import { Figtree } from "next/font/google";
 
 const figtree = Figtree({ subsets: ["latin"] });
 import Navigation from "@/components/Navigation";
 import Header from "@/components/Header";
+import Main from "@/components/Main";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +23,7 @@ export default function RootLayout({
       <body className={figtree.className}>
         <Navigation />
         <Header />
-        {children}
+        <Main>{children}</Main>
       </body>
     </html>
   );

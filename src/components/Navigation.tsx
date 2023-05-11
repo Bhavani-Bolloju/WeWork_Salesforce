@@ -12,7 +12,7 @@ import image from "../assets/user.jpg";
 import classes from "./Navigation.module.scss";
 
 function Navigation() {
-  console.log(image, "image");
+  // console.log(image, "image");
   return (
     <nav className={classes["nav"]}>
       <div className={classes["nav-logo"]}></div>

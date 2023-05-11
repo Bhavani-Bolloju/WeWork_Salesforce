@@ -1,8 +1,10 @@
 :root {
   --bg-color: #f2fbf9;
   --grey-1: #657372; //icons, button texts, h3
-  --grey-2: #d3d7d7; // right border color
-  --grey-3: #e9ebeb; //border color
+  --grey-2: #7b8786;
+  --grey-3: #bdc3c2;
+  --grey-4: #d3d7d7; // right border color
+  --grey-5: #e9ebeb; //border color
   --accent-1: #00b686;
   --primary-1: #04433b; //h1
   --primary-2: #233735; //h2
@@ -28,4 +30,5 @@ body {
   font-size: 1.6rem;
   background-color: var(--bg-color);
   color: #233735;
+  padding: 2rem 5rem;
 }

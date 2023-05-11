@@ -1,0 +1,84 @@
+.header {
+  position: relative;
+  height: fit-content;
+  // padding-bottom: 9rem;
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+
+    h1 {
+      font-size: 3.5rem;
+      color: var(--primary-1);
+      font-weight: 700;
+      letter-spacing: -1.1px;
+    }
+  }
+  &-image {
+    height: 19rem;
+    width: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(110deg, transparent 60%, #ffffff90 60%),
+      url("../assets/home.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    // padding-bottom: 2rem//;
+    &__text {
+      position: absolute;
+      right: 20rem;
+      top: 50%;
+      display: inline-block;
+      font-size: 4.8rem;
+      width: 20%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      color: black;
+      text-transform: capitalize;
+      line-height: 0.9;
+    }
+  }
+
+  &-btn {
+    background-color: var(--accent-1);
+    font-family: inherit;
+    font-weight: 600;
+    padding: 0rem 3rem;
+    height: 4rem;
+    font-size: 1.6rem;
+
+    &:hover {
+      background-color: var(--accent-1);
+    }
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -4rem;
+    left: 2rem;
+    z-index: 10;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    .wework {
+      width: 7rem;
+      height: 100%;
+    }
+    .saleforce {
+      width: 8rem;
+      height: 100%;
+    }
+
+    .plus {
+      font-size: 3rem;
+      font-weight: 100;
+      color: #8c8c8c;
+    }
+  }
+}
