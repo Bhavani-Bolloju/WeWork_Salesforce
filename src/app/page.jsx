@@ -1,11 +1,8 @@
 import React from "react";
+import BasicInfo from "@/components/BasicInfo";
 
 function page() {
-  return (
-    <section>
-      <h2>Company Profile</h2>
-    </section>
-  );
+  return <BasicInfo />;
 }
 
 export default page;

@@ -1,17 +1,16 @@
 .section {
   &-main {
     margin-top: 7rem;
-    display: flex;
-
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 2rem;
     padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 25rem 1fr;
+    grid-template-rows: auto;
+    column-gap: 3rem;
+    row-gap: 2rem;
   }
 
   &-header {
-    flex-grow: 1;
-    flex-basis: 100%;
+    grid-column: 1/-1;
     &-content {
       display: flex;
       align-items: center;
@@ -25,7 +24,7 @@
   }
   &-btns {
     display: flex;
-    width: 100%;
+    flex-basis: 100%;
     gap: 1rem;
     border-bottom: 1px solid var(--grey-5);
     margin: 2rem 0;
@@ -53,7 +52,7 @@
   }
 }
 .nav-sidebar {
-  width: 30rem;
+  grid-column: 1/2;
   text-transform: capitalize;
   background-color: #fff;
   padding: 2rem 3rem;

@@ -1,0 +1,25 @@
+.section-basic-info {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary-2);
+      text-transform: capitalize;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+  }
+}
