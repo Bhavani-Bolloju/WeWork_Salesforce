@@ -24,6 +24,17 @@
     background-size: cover;
     background-position: center;
     position: relative;
+
+    @media screen and (max-width: 750px) {
+      background: linear-gradient(110deg, transparent 55%, #ffffff90 55%),
+        url("../assets/home.png");
+    }
+
+    @media screen and (max-width: 650px) {
+      background: linear-gradient(110deg, transparent 50%, #ffffff90 50%),
+        url("../assets/home.png");
+    }
+
     &__text {
       position: absolute;
       left: 65%;
@@ -36,6 +47,17 @@
       color: black;
       text-transform: capitalize;
       line-height: 0.9;
+
+      @media screen and (max-width: 750px) {
+        left: 60%;
+        font-size: 4rem;
+      }
+      @media screen and (max-width: 650px) {
+        font-size: 3.5rem;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -49,7 +71,6 @@
   }
 
   :global(.ant-btn-primary) {
-    // background-color: red;
     &:hover {
       background-color: #fff;
       border: 1px solid var(--grey-3);

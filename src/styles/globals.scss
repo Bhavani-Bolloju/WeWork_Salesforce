@@ -29,7 +29,10 @@ html {
     font-size: 48%;
   }
   @media screen and (max-width: 650px) {
-    // font-size: 46%;
+    font-size: 45%;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 38%;
   }
 }
 
