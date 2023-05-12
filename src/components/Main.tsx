@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import classes from "./Main.module.scss";
-import { Button } from "antd";
 import { MessageOutlined, ShareAltOutlined } from "@ant-design/icons";
 import { Badge } from "antd";
 import { Progress } from "antd";
