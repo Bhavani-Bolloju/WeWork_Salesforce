@@ -1,4 +1,7 @@
 .section-basic-info {
+  @media screen and (max-width: 750px) {
+    grid-column: 1/-1;
+  }
   .header {
     display: flex;
     align-items: center;
@@ -34,12 +37,14 @@
 
   .image {
     width: 100%;
-    min-height: 100%;
+    min-height: 45rem;
     position: relative;
 
     img {
       width: 100%;
-      min-height: 100%;
+      height: 100%;
+      height: 45rem;
+      object-fit: cover;
       border-radius: 1rem;
     }
 

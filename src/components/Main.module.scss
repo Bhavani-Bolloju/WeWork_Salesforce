@@ -119,6 +119,10 @@
   padding: 2rem 3rem;
   border-radius: 1rem;
 
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+
   h3 {
     color: var(--grey-1);
     font-size: 2rem;
@@ -148,6 +152,10 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
+  @media screen and (max-width: 750px) {
+    grid-column: 1/-1;
+  }
 
   :global(.ant-badge-count) {
     min-width: 15px;
