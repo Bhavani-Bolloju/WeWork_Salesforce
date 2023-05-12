@@ -70,32 +70,73 @@
       }
     }
   }
-  &-btns {
-    display: flex;
-    flex-basis: 100%;
-    gap: 1rem;
-    border-bottom: 1px solid var(--grey-5);
-    margin: 2rem 0;
-    button {
+
+  // &-btns {
+  // display: flex;
+  // flex-basis: 100%;
+  // gap: 1rem;
+  // border-bottom: 1px solid var(--grey-5);
+  // margin: 2rem 0;
+  // button {
+  //   color: var(--grey-1);
+  //   font-family: inherit;
+  //   text-transform: capitalize;
+  //   padding: 1rem 2.4rem;
+  //   height: 100%;
+  //   font-size: 1.6rem;
+  //   font-weight: 600;
+  //   border: 1px solid var(--grey-3);
+  //   background-color: transparent;
+  // }
+  // :global(.ant-btn) {
+  //   &:hover {
+  //     background-color: #fff;
+  //     border: 1px solid var(--grey-3);
+  //     color: var(--accent-1);
+  //   }
+  // }
+  // .btn-internal {
+  //   margin-left: auto;
+  // }
+  //   }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-basis: 100%;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--grey-5);
+
+  .internal-actions {
+    margin-left: auto;
+  }
+  margin: 2rem 0;
+
+  .nav-items {
+    background-color: transparent;
+
+    a {
+      border-radius: 0.3rem;
+      border: 1px solid var(--grey-3);
+      padding: 1rem 2.2rem;
+      text-decoration: none;
       color: var(--grey-1);
       font-family: inherit;
       text-transform: capitalize;
-      padding: 1rem 2.4rem;
-      height: 100%;
       font-size: 1.6rem;
-      font-weight: 600;
-      border: 1px solid var(--grey-3);
-      background-color: transparent;
-    }
-    :global(.ant-btn) {
+      font-weight: 500;
       &:hover {
+        cursor: pointer;
         background-color: #fff;
-        border: 1px solid var(--grey-3);
         color: var(--accent-1);
       }
     }
-    .btn-internal {
-      margin-left: auto;
+
+    & .active {
+      background-color: #fff;
+      color: var(--accent-1);
     }
   }
 }
@@ -111,7 +152,7 @@
     font-size: 2rem;
     margin-bottom: 2.5rem;
   }
-  ul {
+  &-list {
     list-style: none;
     li {
       font-size: 1.6rem;
