@@ -8,7 +8,6 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 function Main({ children }: { children: React.ReactNode }) {
-  const { push } = useRouter();
   const pathname = usePathname();
   return (
     <main className={classes["section-main"]}>

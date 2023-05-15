@@ -28,11 +28,8 @@ html {
   @media screen and (max-width: 750px) {
     font-size: 48%;
   }
-  @media screen and (max-width: 650px) {
-    font-size: 45%;
-  }
-  @media screen and (max-width: 450px) {
-    font-size: 38%;
+  @media screen and (max-width: 600px) {
+    font-size: 42%;
   }
 }
 
@@ -47,4 +44,8 @@ body {
   background-color: var(--bg-color);
   color: #233735;
   padding: 2rem 5rem;
+
+  @media screen and (max-width: 650px) {
+    padding: 2rem;
+  }
 }

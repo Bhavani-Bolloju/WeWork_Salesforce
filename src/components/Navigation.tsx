@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { Badge } from "antd";
+import { Button, Drawer } from "antd";
 
 import {
   HiOutlineInbox,
@@ -8,40 +12,102 @@ import {
   HiOutlineChevronRight
 } from "react-icons/hi";
 
-import { Badge } from "antd";
-
 import image from "../assets/user.jpg";
 import classes from "./Navigation.module.scss";
 
-function Navigation() {
-  // console.log(image, "image");
+const User = function () {
   return (
-    <nav className={classes["nav"]}>
-      <div className={classes["nav-logo"]}></div>
-      <HiOutlineChevronRight className={classes["nav-svg"]} />
-      <ul className={classes["nav-list"]}>
-        <li>
-          <HiOutlineSearch />
-        </li>
-        <li>
-          <HiOutlineInbox />
-        </li>
-        <li className={classes["notification"]}>
-          <HiOutlineBell />
-          <span className={classes["notification-badge"]}>10</span>
+    <div className={classes["user"]}>
+      <img src={image.src} alt="user-profile" />
+    </div>
+  );
+};
 
-          {/* <Badge count={5} style={{ fontSize: "10px" }}>
-       <HiOutlineBell />
-        </Badge> */}
-        </li>
-        <li>
-          <HiOutlineQuestionMarkCircle />
-        </li>
-      </ul>
-      <div className={classes["user"]}>
-        <img src={image.src} alt="user-profile" />
+const NavItem = function ({ children }: { children: React.ReactNode }) {
+  return <li className={classes["nav-item"]}>{children}</li>;
+};
+
+function Navigation() {
+  const [open, setOpen] = useState(false);
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+  return (
+    <>
+      <nav className={classes["nav"]}>
+        <div className={classes["nav-logo"]}></div>
+        <HiOutlineChevronRight className={classes["nav-svg"]} />
+        <ul className={classes["nav-list"]}>
+          <NavItem>
+            <HiOutlineSearch />
+          </NavItem>
+          <NavItem>
+            <HiOutlineInbox />
+          </NavItem>
+          <NavItem>
+            <Badge count={9} className={classes["badge"]}>
+              <HiOutlineBell />
+            </Badge>
+          </NavItem>
+          <NavItem>
+            <HiOutlineQuestionMarkCircle />
+          </NavItem>
+        </ul>
+        <User />
+
+        <RxHamburgerMenu
+          className={classes["hamburger-icon"]}
+          onClick={showDrawer}
+        />
+      </nav>
+      <div>
+        {open && (
+          <Drawer
+            title="Basic Drawer"
+            placement="right"
+            onClose={onClose}
+            open={open}
+            width="100%"
+            className={classes["my-drawer"]}
+          >
+            <div className={classes["drawer-content"]}>
+              <div className={classes["drawer-user"]}>
+                <img src={image.src} alt="user image" />
+                <div className={classes["drawer-user-name"]}>
+                  <span>jane smith</span>
+                  <span>sales executive</span>
+                </div>
+              </div>
+              <ul className={classes["drawer-content-list"]}>
+                <li>
+                  <HiOutlineSearch />
+                  <span>search</span>
+                </li>
+                <li>
+                  <HiOutlineInbox />
+                  <span>inbox</span>
+                </li>
+                <li>
+                  <Badge count={2} className={classes["badge"]}>
+                    <HiOutlineBell />
+                  </Badge>
+                  <span>notifications</span>
+                </li>
+                <li>
+                  <HiOutlineQuestionMarkCircle />
+                  <span>help</span>
+                </li>
+              </ul>
+            </div>
+          </Drawer>
+        )}
       </div>
-    </nav>
+    </>
   );
 }
 

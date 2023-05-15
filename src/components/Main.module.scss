@@ -14,12 +14,17 @@
     grid-column: 1/-1;
     &-content {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
+      margin-bottom: 4.5rem;
 
       h2 {
         text-transform: capitalize;
         color: var(--primary-2);
+
+        @media screen and (max-width: 400px) {
+          font-size: 2rem;
+        }
       }
 
       .action-plan {
@@ -43,6 +48,10 @@
           justify-content: space-between;
         }
 
+        :global(.ant-progress-steps-item) {
+          width: 10px;
+        }
+
         :global(.ant-progress) {
           border-radius: 1rem;
         }
@@ -51,9 +60,15 @@
         }
 
         :global(.ant-progress-steps-item) {
-          width: 13px;
           height: 12px;
           background-color: var(--grey-5);
+
+          @media screen and (max-width: 950px) {
+            width: 12px !important;
+          }
+          @media screen and (max-width: 650px) {
+            width: 7px !important;
+          }
 
           &:nth-child(1) {
             border-top-left-radius: 1rem;
@@ -80,8 +95,16 @@
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--grey-5);
 
+  @media screen and (max-width: 550px) {
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
   .internal-actions {
     margin-left: auto;
+    @media screen and (max-width: 550px) {
+      display: none;
+    }
   }
   margin: 2rem 0;
 
@@ -103,6 +126,11 @@
         cursor: pointer;
         background-color: #fff;
         color: var(--accent-1);
+      }
+
+      @media screen and (max-width: 450px) {
+        padding: 1rem 1.8rem;
+        font-size: 1.3rem;
       }
     }
 

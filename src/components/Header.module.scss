@@ -13,8 +13,33 @@
       color: var(--primary-1);
       font-weight: 700;
       letter-spacing: -1.1px;
+
+      @media screen and (max-width: 650px) {
+        font-size: 3rem;
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 2.8rem;
+      }
     }
   }
+
+  &-btn {
+    background-color: var(--accent-1);
+    font-family: inherit;
+    font-weight: 600;
+    padding: 0.5rem 3rem;
+    height: 4.5rem;
+    font-size: 1.6rem;
+  }
+
+  :global(.ant-btn-primary) {
+    &:hover {
+      background-color: #fff;
+      border: 1px solid var(--grey-3);
+      color: var(--accent-1);
+    }
+  }
+
   &-image {
     height: 19rem;
     width: 100%;
@@ -58,23 +83,6 @@
       @media screen and (max-width: 450px) {
         font-size: 3rem;
       }
-    }
-  }
-
-  &-btn {
-    background-color: var(--accent-1);
-    font-family: inherit;
-    font-weight: 600;
-    padding: 0rem 3rem;
-    height: 4rem;
-    font-size: 1.6rem;
-  }
-
-  :global(.ant-btn-primary) {
-    &:hover {
-      background-color: #fff;
-      border: 1px solid var(--grey-3);
-      color: var(--accent-1);
     }
   }
 
