@@ -11,6 +11,7 @@ import {
 } from "react-icons/vsc";
 import { TfiDownload } from "react-icons/tfi";
 import { MdOutlineOpenInNew } from "react-icons/md";
+import Image from "next/image";
 
 import weWork from "../../assets/wework-title.png";
 import logo from "../../assets/wework-logo.png";
@@ -27,9 +28,9 @@ function BasicInfo() {
         </div>
       </div>
       <div className={classes["image"]}>
-        <img src={weWork.src} alt="we work" />
+        <Image src={weWork.src} alt="we work" width={100} height={100} />
         <div className={classes["info-heading"]}>
-          <img src={logo.src} alt="we work logo" />
+          <Image src={logo.src} alt="we work logo" width={100} height={100} />
           <p className={classes["title"]}>
             For all the ways you work, we are here
           </p>
