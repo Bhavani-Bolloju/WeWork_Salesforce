@@ -1,8 +1,9 @@
 ## Run app locally
 
- To Install all the dependencies run:
+ To run app locally, clone the project and install all the dependencies:
  ```bash
-npm install
+ 1. git clone https://github.com/Bhavani-Bolloju/WeWork_Salesforce
+ 2. npm install
 ```
   
 ## Getting Started
