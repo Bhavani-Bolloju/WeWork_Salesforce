@@ -1,7 +1,9 @@
 ## To Run app locally
 
-  first Install all the dependencies:
-  npm install
+ Install all the dependencies:
+ ```bash
+npm install
+```
   
 ## Getting Started
 
