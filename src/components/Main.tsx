@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import classes from "./Main.module.scss";
-import { MessageOutlined, ShareAltOutlined } from "@ant-design/icons";
 import { Badge } from "antd";
 import { Progress } from "antd";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
+
+import { AiOutlineMessage, AiOutlineShareAlt } from "react-icons/ai";
 
 function Main({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -83,9 +84,9 @@ function Main({ children }: { children: React.ReactNode }) {
       {children}
       <div className={classes["section-footer"]}>
         <Badge count={5} style={{ fontSize: "10px" }}>
-          <MessageOutlined />
+          <AiOutlineMessage />
         </Badge>
-        <ShareAltOutlined className={classes["share-icon"]} />
+        <AiOutlineShareAlt className={classes["share-icon"]} />
       </div>
     </main>
   );

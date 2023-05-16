@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Badge } from "antd";
-import { Button, Drawer } from "antd";
+import { Drawer } from "antd";
 
 import {
   HiOutlineInbox,

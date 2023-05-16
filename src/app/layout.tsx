@@ -2,11 +2,43 @@
 
 import "../styles/globals.scss";
 import { Figtree } from "next/font/google";
-
 const figtree = Figtree({ subsets: ["latin"] });
+import localFont from "next/font/local";
+
 import Navigation from "@/components/Navigation";
 import Header from "@/components/Header";
 import Main from "@/components/Main";
+
+const myFont = localFont({
+  src: "./fonts/Proxima-Bold.ttf"
+  // display: "swap"
+});
+
+const proximaNova = localFont({
+  src: [
+    {
+      path: "./fonts/proxima_reg-webfont.ttf",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "./fonts/Proxima-Bold.ttf",
+      weight: "700",
+      style: "normal"
+    },
+    {
+      path: "./fonts/Proxima-Extrabold.ttf",
+      weight: "800",
+      style: "normal"
+    },
+    {
+      path: "./fonts/Proxima-Black.ttf",
+      weight: "900",
+      style: "normal"
+    }
+  ],
+  variable: "--proxima-nova"
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -19,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={figtree.className}>
+    <html lang="en" className={proximaNova.variable}>
+      <body className="text">
         <Navigation />
         <Header />
         <Main>{children}</Main>
