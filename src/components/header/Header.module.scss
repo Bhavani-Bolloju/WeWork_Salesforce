@@ -46,19 +46,19 @@
     width: 100%;
     border-radius: 1rem;
     background: linear-gradient(110deg, transparent 60%, #ffffff90 60%),
-      url("../assets/home.png");
+      url("../../assets/home.png");
     background-size: cover;
     background-position: center;
     position: relative;
 
     @media screen and (max-width: 750px) {
       background: linear-gradient(110deg, transparent 55%, #ffffff90 55%),
-        url("../assets/home.png");
+        url("../../assets/home.png");
     }
 
-    @media screen and (max-width: 650px) {
-      background: linear-gradient(110deg, transparent 50%, #ffffff90 50%),
-        url("../assets/home.png");
+    @media screen and (max-width: 550px) {
+      background: linear-gradient(110deg, transparent 50%, #ffffff90 40%),
+        url("../../assets/home.png");
     }
 
     &__text {

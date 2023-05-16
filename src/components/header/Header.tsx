@@ -3,8 +3,8 @@
 import React from "react";
 import classes from "./Header.module.scss";
 import { Button } from "antd";
-import wework from "../assets/wework.png";
-import saleforce from "../assets/saleforce.png";
+import wework from "../../assets/wework.png";
+import saleforce from "../../assets/saleforce.png";
 
 function Header() {
   return (

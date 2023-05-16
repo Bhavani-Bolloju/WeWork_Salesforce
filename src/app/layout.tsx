@@ -5,14 +5,10 @@ import { Figtree } from "next/font/google";
 const figtree = Figtree({ subsets: ["latin"] });
 import localFont from "next/font/local";
 
-import Navigation from "@/components/Navigation";
-import Header from "@/components/Header";
-import Main from "@/components/Main";
+import Header from "@/components/header/Header";
+import Main from "@/components/main/Main";
 
-const myFont = localFont({
-  src: "./fonts/Proxima-Bold.ttf"
-  // display: "swap"
-});
+import Navigation from "@/components/navigation/Navigation";
 
 const proximaNova = localFont({
   src: [

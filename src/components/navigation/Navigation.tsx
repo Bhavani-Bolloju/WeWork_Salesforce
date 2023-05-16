@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Badge } from "antd";
-import { Drawer } from "antd";
 
 import {
   HiOutlineInbox,
@@ -12,8 +11,9 @@ import {
   HiOutlineChevronRight
 } from "react-icons/hi";
 
-import image from "../assets/user.jpg";
+import image from "../../assets/user.jpg";
 import classes from "./Navigation.module.scss";
+import NavDrawer from "./NavDrawer";
 
 const User = function () {
   return (
@@ -65,48 +65,8 @@ function Navigation() {
           onClick={showDrawer}
         />
       </nav>
-      <div>
-        {open && (
-          <Drawer
-            title="Basic Drawer"
-            placement="right"
-            onClose={onClose}
-            open={open}
-            width="100%"
-            className={classes["my-drawer"]}
-          >
-            <div className={classes["drawer-content"]}>
-              <div className={classes["drawer-user"]}>
-                <img src={image.src} alt="user image" />
-                <div className={classes["drawer-user-name"]}>
-                  <span>jane smith</span>
-                  <span>sales executive</span>
-                </div>
-              </div>
-              <ul className={classes["drawer-content-list"]}>
-                <li>
-                  <HiOutlineSearch />
-                  <span>search</span>
-                </li>
-                <li>
-                  <HiOutlineInbox />
-                  <span>inbox</span>
-                </li>
-                <li>
-                  <Badge count={2} className={classes["badge"]}>
-                    <HiOutlineBell />
-                  </Badge>
-                  <span>notifications</span>
-                </li>
-                <li>
-                  <HiOutlineQuestionMarkCircle />
-                  <span>help</span>
-                </li>
-              </ul>
-            </div>
-          </Drawer>
-        )}
-      </div>
+
+      {open && <NavDrawer onClose={onClose} open={open} />}
     </>
   );
 }

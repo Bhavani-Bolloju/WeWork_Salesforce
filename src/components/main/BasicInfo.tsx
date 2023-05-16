@@ -1,7 +1,6 @@
 import React from "react";
 import classes from "./BasicInfo.module.scss";
-import weWork from "../assets/wework-title.png";
-import logo from "../assets/wework-logo.png";
+
 import {
   VscEyeClosed,
   VscArrowDown,
@@ -12,6 +11,9 @@ import {
 } from "react-icons/vsc";
 import { TfiDownload } from "react-icons/tfi";
 import { MdOutlineOpenInNew } from "react-icons/md";
+
+import weWork from "../../assets/wework-title.png";
+import logo from "../../assets/wework-logo.png";
 
 function BasicInfo() {
   return (
