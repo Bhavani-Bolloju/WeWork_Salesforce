@@ -1,6 +1,6 @@
-## To Run app locally
+## Run app locally
 
- Install all the dependencies:
+ To Install all the dependencies run:
  ```bash
 npm install
 ```
