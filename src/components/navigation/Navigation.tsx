@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Badge } from "antd";
+import Image from "next/image";
 
 import {
   HiOutlineInbox,
@@ -18,7 +19,7 @@ import NavDrawer from "./NavDrawer";
 const User = function () {
   return (
     <div className={classes["user"]}>
-      <img src={image.src} alt="user-profile" />
+      <Image src={image.src} alt="user-profile" width={50} height={50} />
     </div>
   );
 };
