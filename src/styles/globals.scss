@@ -42,7 +42,7 @@ body {
 body {
   font-size: 1.6rem;
   background-color: var(--bg-color);
-  color: #233735;
+  color: var(--primary-2);
   padding: 2rem 5rem;
 
   @media screen and (max-width: 650px) {

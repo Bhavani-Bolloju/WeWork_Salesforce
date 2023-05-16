@@ -5,6 +5,7 @@ import classes from "./Header.module.scss";
 import { Button } from "antd";
 import wework from "../../assets/wework.png";
 import saleforce from "../../assets/saleforce.png";
+import Image from "next/image";
 
 function Header() {
   return (
@@ -21,12 +22,20 @@ function Header() {
         </span>
       </div>
       <div className={classes["header-logo"]}>
-        <img src={wework.src} className={classes["wework"]} alt="we work" />
+        <Image
+          src={wework.src}
+          className={classes["wework"]}
+          alt="wework picture"
+          width={70}
+          height={70}
+        />
         <span className={classes["plus"]}>+</span>
-        <img
+        <Image
           src={saleforce.src}
           className={classes["saleforce"]}
-          alt="sale force"
+          alt="salesforce picture"
+          width={80}
+          height={80}
         />
       </div>
     </header>
